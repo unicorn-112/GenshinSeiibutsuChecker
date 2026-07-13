@@ -1,0 +1,2 @@
+# GenshinSeiibutsuChecker
+原神プレイヤーのための聖遺物簡易チェッカー
