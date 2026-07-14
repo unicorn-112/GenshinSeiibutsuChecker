@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: GenshinSeiibutsuChecker
-    env: java
-    buildCommand: "./mvnw clean install"
+    name: genshin-seibutsu-checker
+    env: node
+    buildCommand: "apt-get update && apt-get install -y openjdk-17-jdk && ./mvnw clean install"
     startCommand: "java -jar target/*.jar"
