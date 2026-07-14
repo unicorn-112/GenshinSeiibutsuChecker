@@ -33,7 +33,7 @@ function App() {
     setError("");
     try {
       const response = await fetch(
-        "http://localhost:8080/api/artifact/calculate",
+        "https://genshinseiibutsucheckerapp.onrender.com/api/artifact/calculate",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
