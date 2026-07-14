@@ -4,7 +4,7 @@
 
 ## アプリケーションURL
 
-[準備中]
+[https://genshin-seiibutsu-checker.vercel.app/]
 
 ## 開発の背景
 
