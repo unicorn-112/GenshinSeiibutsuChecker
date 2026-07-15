@@ -12,12 +12,16 @@ import jakarta.validation.Valid;
 @CrossOrigin(origins = "*")
 public class ArtifactController {
 
-    @PostMapping("/calculate")
-    public CalculateResponse calculate(@Valid @RequestBody CalculateRequest request) {
-        // 計算ロジック
-        double score = request.getBaseStat() + (request.getCriRate() * 2) + request.getCriDmg();
-        String rank = (score > 30) ? "S" : "A";
+   @PostMapping("/calculate")
+   public CalculateResponse calculate(@Valid @RequestBody CalculateRequest request) {
+     long baseStat = Math.round(request.getBaseStat() * 10);
+     long criRate = Math.round(request.getCriRate() * 10);
+     long criDmg = Math.round(request.getCriDmg() * 10);
 
-        return new CalculateResponse(score, rank);
+     long score10 = baseStat + (criRate * 2) + criDmg;
+
+     double roundedScore = score10 / 10.0;
+
+     return new CalculateResponse(roundedScore);
     }
 }
